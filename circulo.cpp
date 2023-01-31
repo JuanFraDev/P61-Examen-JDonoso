@@ -1,11 +1,22 @@
 #include "circulo.h"
 
+const QColor &Circulo::colorCir() const
+{
+    return m_colorCir;
+}
+
+void Circulo::setColorCir(const QColor &newColorCir)
+{
+    m_colorCir = newColorCir;
+}
+
 Circulo::Circulo()
     :QPoint(0,0)
 {
-    m_posInY = 50;
-    m_posInX = 20;
+    m_posInY = 70;
+    m_posInX = 80;
     m_tamanio = 100;
+    m_colorCir = Qt::black;
 }
 
 Circulo::Circulo(int xpos, int ypos, int tam)

@@ -63,6 +63,9 @@
      <layout class="QHBoxLayout" name="horizontalLayout_2">
       <item>
        <widget class="QSlider" name="inDimension">
+        <property name="minimum">
+         <number>1</number>
+        </property>
         <property name="maximum">
          <number>200</number>
         </property>

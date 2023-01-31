@@ -23,6 +23,8 @@ class Juego : public QMainWindow
 public:
     Juego(QWidget *parent = nullptr);
     ~Juego();
+    void setColor(const QColor &newColor);
+
 protected:
     virtual void paintEvent(QPaintEvent *event);
 
@@ -44,6 +46,7 @@ private:
     Circulo *m_circulo;
     QImage *mImagen;
     QPainter *mPainter;
+    QColor m_color;
     void dibujar();
 };
 #endif // JUEGO_H

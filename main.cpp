@@ -1,3 +1,8 @@
+/************************
+ * Nombre: Juan Donoso  *
+ * Cedula: 1723514335   *
+ * **********************/
+
 #include "juego.h"
 
 #include <QApplication>
