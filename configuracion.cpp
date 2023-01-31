@@ -8,6 +8,7 @@ Configuracion::Configuracion(QWidget *parent) :
     ui->setupUi(this);
     m_color.setRgb(165,29,45);
     setWidgetColor();
+    m_dimension = 100;
 }
 
 Configuracion::~Configuracion()
@@ -47,5 +48,17 @@ const QColor &Configuracion::color() const
 int Configuracion::dimension() const
 {
     return m_dimension;
+}
+
+void Configuracion::on_inDimension_sliderMoved(int position)
+{
+    m_dimension = ui->inDimension->value();
+}
+
+
+
+void Configuracion::on_btnColor_clicked()
+{
+
 }
 

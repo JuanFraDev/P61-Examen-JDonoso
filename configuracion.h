@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include <QColorDialog>
+#include "circulo.h"
 
 namespace Ui {
 class Configuracion;
@@ -11,6 +12,11 @@ class Configuracion;
 class Configuracion : public QDialog
 {
     Q_OBJECT
+private:
+    Ui::Configuracion *ui;
+    QColor m_color;
+    int m_dimension;
+    void setWidgetColor();
 
 public:
     explicit Configuracion(QWidget *parent = nullptr);
@@ -25,12 +31,8 @@ public:
 private slots:
     void on_btnColor_released();
 
-private:
-    Ui::Configuracion *ui;
-    QColor m_color;
-    int m_dimension;
-
-    void setWidgetColor();
+    void on_inDimension_sliderMoved(int position);
+    void on_btnColor_clicked();
 };
 
 #endif // CONFIGURACION_H
